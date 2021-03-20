@@ -25,62 +25,66 @@ const generateTeam = team => {
 
     const generateManager = Manager => {
         return ` 
-        <div class="card" style="width: 18rem;" >
-            <div class="card-header" id="manager">
-            <h3>${Manager.name}</h3>
-            <i class="fas fa-coffee"><h5> "Manager" </h5></i>
+        <div class="card" style="width: 18rem;">
+        <div class="employeeTitle text-center" id="manager">
+            <h2>${Manager.name}</h2>
+            <h5> "Manager" </h5>
+            <i class="fas fa-briefcase"></i>
         </div>
         <div class = "space">
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">ID:${Manager.id}</li>
-                <li class="list-group-item">Email:${Manager.email}</li>
-                <li class="list-group-item">Office Number:${Manager.officeNum}</li>
+                <li class="list-group-item">ID:  ${Manager.id}</li>
+                <li class="list-group-item">Email:  ${Manager.email}</li>
+                <li class="list-group-item">Office Number:  ${Manager.officeNum}</li>
              </ul>
+        </div>
         </div>
         `
     }
-   // return generateManager(team[0]);
+    // return generateManager(team[0]);
 
     const generateEngineer = Engineer => {
         return `
-        <div class="card" style="width: 18rem;" >
-        <div class="card-header" id="engineer">
-        <h3>${Engineer.name}</h3>
-        <i class="fas fa-coffee"><h5> "Engineer" </h5></i>
+        <div class="card" style="width: 18rem;">
+        <div class="employeeTitle text-center" id="engineer">
+        <h2>${Engineer.name}</h2>
+        <h5> "Engineer" </h5>
+        <i class="fas fa-laptop-code"></i>
         </div>
         <div class = "space">
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">ID: ${Engineer.id}</li>
-                <li class="list-group-item">Email:${Engineer.email}</li>
-                <li class="list-group-item">Git Hub:${Engineer.GitHub}</li>
+                <li class="list-group-item">ID:  ${Engineer.id}</li>
+                <li class="list-group-item">Email:  ${Engineer.email}</li>
+                <li class="list-group-item">GitHub:  ${Engineer.GitHub}</li>
             </ul>
         </div>
     </div>`
     }
 
-   // return generateEngineer(team[0]);
+    // return generateEngineer(team[0]);
 
 
     const generateIntern = Intern => {
         return `
-        <div class="card" style="width: 18rem;" >
-        <div class="card-header" id="intern">
-        <h3>${Intern.name}</h3>
-        <i class="fas fa-coffee"><h5> "Intern" </h5></i>
+        <div class="card" style="width: 18rem;">
+        <div class="employeeTitle text-center" id="intern">
+        <h2>${Intern.name}</h2>
+        <h5> "Intern" </h5>
+        <i class="far fa-clipboard"></i>
         </div>
         <div class = "space">
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${Intern.id}</li>
-                <li class="list-group-item">Email:${Intern.email}</li>
-                <li class="list-group-item">Current University:${Intern.school}</li>
+                <li class="list-group-item">Email:  ${Intern.email}</li>
+                <li class="list-group-item">Current University:  ${Intern.school}</li>
             </ul>
         </div>
     </div>`
     }
-    
-  //  return generateIntern(team[0]);
 
-  // ---------------- //
+    //  return generateIntern(team[0]);
+
+    // ---------------- //
     const html = [];
     html.push(team
         .filter(employee => employee.getRole() === "Manager")
@@ -96,7 +100,7 @@ const generateTeam = team => {
         .map(intern => generateIntern(intern))
         .join("")
     );
-    
+
     return html.join("");
 
 }
@@ -106,17 +110,20 @@ const layout = team => {
     <!DOCTYPE html>
     <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Team Profile Generator</title>
-        <link rel="stylesheet" href="../src/style.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">         
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Profile Generator</title>
+    <link rel="stylesheet" href="../src/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d3bce829f3.js" crossorigin="anonymous"></script>
     </head>
+    <h1> Our Team: </h1>
     <body>
+    <div class="row">
         ${generateTeam(team)}
+    </div>
     </body>
     </html>
     `
