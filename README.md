@@ -22,7 +22,6 @@ Create profiles for your own employees in a flash, encourage them to contact eac
 ![Image](https://user-images.githubusercontent.com/74163812/111855190-bd5aa280-88f9-11eb-91f0-c5771297f29c.png)
 <br />
 <br />
-GitHib Link: https://rjkenney11.github.io/Team-Profile-Generator/ <br /><br />
 
 Watch this application in action: https://drive.google.com/file/d/1hc6GFoRuRzk71ktqlvzuC4_jPHDOjbIx/view
 <br /><br />
