@@ -1,7 +1,7 @@
 # Team Profile Generator
   
 ### Description: 
-"Your task is to build a Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person. Testing is key to making code maintainable, so you’ll also write a unit test for every part of your code and ensure that it passes each test."
+Created using npm inquirer, this app prompts the user for information and generates a team profile based on user responses in an html file.
 
 ### Table of Contents:
   - [Description](#description)
@@ -10,7 +10,6 @@
   - [Screenshot](#screenshot)
   - [Contributing](#contributing)
   - [Questions](#questions)
-  - [License](#license)
 
 ### Installation:
 To Utilize the Application clone the repository and be sure to do an npm install
