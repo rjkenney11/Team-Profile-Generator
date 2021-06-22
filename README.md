@@ -1,7 +1,7 @@
 # Team Profile Generator
   
 ### Description: 
-Created using npm inquirer, this app prompts the user for information and generates a team profile based on user responses in an html file.
+Created using npm inquirer, this app prompts the user for information and generates a team profile (based on user responses) in an html file.
 
 ### Table of Contents:
   - [Description](#description)
